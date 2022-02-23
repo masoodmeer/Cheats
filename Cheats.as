@@ -99,7 +99,7 @@ dictionary cheats = {
 	{'.givepoints', Cheat("%0 points",   givePoints,     CHEAT_GIVE, 	 1, false, false)},
 	{'.maxhealth',  Cheat("maxhealth",   setMaxHealth,   CHEAT_GIVE,     1, false, false)},
 	{'.maxarmor',   Cheat("maxarmor",    setMaxCharge,   CHEAT_GIVE,     1, false, false)},
-	{'.speed',   	Cheat("%0 speed",    setMaxSpeed,    CHEAT_GIVE,     1, false, false)},
+	{'.speed',   	Cheat("%100 speed",    setMaxSpeed,    CHEAT_GIVE,     1, false, false)},
 	{'.damage',   	Cheat("%0 damage",   setWepDamage,   CHEAT_GIVE,     1, false, false)},
 	{'.gravity',   	Cheat("%0% gravity", setGravity,     CHEAT_GIVE,     1, false, false)},
 	{'.giveall',    Cheat("everything",  giveAll,        CHEAT_GIVE, 	 0, false, false)},
@@ -331,7 +331,7 @@ CBasePlayer@ getPlayer(CBasePlayer@ caller, string name)
 	return null;
 }
 
-// disabling cheats should also remove active ones from peasents (they can't turn them off themselves)
+
 void removePeasentCheats(CBasePlayer@ plr)
 {
 	if (!isAdmin(plr))
